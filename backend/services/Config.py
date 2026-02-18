@@ -1,4 +1,5 @@
 
+from logging import WARN
 import os
 import pathlib
 from dotenv import load_dotenv
@@ -16,3 +17,10 @@ class Config:
     DB_USER = os.getenv("DB_USER", "myuser")
     DB_PASSWORD = os.getenv("DB_PASSWORD", "mypassword")
     LOG_BASE_DIR = LOG_BASE_DIR
+
+class LogTypes:
+    ERROR = "error"
+    WARN = "warn"
+    INFO = "info"
+    TASK = "task"
+    FATAL = "fatal"
